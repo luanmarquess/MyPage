@@ -1,6 +1,68 @@
+*{
+   margin: 0;
+   padding: 0; 
+}
+body{
+    background-color: #f9f9f9;  
+}
+#check{
+    display: none;
+    /*retira o checkbox da tela*/
+}
+
+#icon{
+    cursor: pointer;
+    /*Muda o estilo do cursor ao sobrepor a imagem*/
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+}
+
+.bar{
+    background-color: #333 ;
+    height: 100%;
+    width: 200px;
+    position: absolute;
+    transition: all .2s linear;
+    left: -300px;
+}
+nav{
+    width: 100%;
+    position: absolute;
+    top: 60px;
+}
+nav a{
+    text-decoration: none;
+}
+.link{
+    background-color: #494950;
+    padding: 20px;
+    font-family: 'Arial';
+    font-size: 12pt;
+    transition: all .2s linear;
+    color: #f4f4f9;
+    border-bottom: 2px solid #222;
+    opacity: 0;
+    margin-top: 200px;
+
+}
+.link:hover{
+    background-color: #050542;
+}
+
+/*transição da barra saindo de -300px indo até 300px*/
+#check:checked ~ .bar{
+    transform: translateX(300px);    
+}
+/*transição links*/
+#check:checked ~ .bar nav a .link{
+    opacity: 1;  
+    margin-top: 0;
+    transition-delay: .2s;
+}
 /*menu*/
 /*ACRESCENTAR NO MENU OS LOGOS E AS REDES SOCIAIS AOU INVÉS DE "HOME CONTATO..."*/
-body{
+/*body{
     font-family: 'Kanit', sans-serif;  
 }
 
@@ -45,13 +107,14 @@ nav a {
 
 nav a:hover{
     transition: 400ms;
-    color: #003366;
+    color: #003366; 
 }
-
+*/
 
 /*main*/
+/*
 main{
-    height: 1600px;
+    height: 100%;
    background: linear-gradient(-90deg,rgb(60,67,84), rgb(16,16,16), rgb(32,32,32),rgb(48,48,48),rgb(32,32,32), rgb(16,16,16),rgb(60,67,84));
    text-align: center;
 }
@@ -62,8 +125,9 @@ main p{
     padding: 200px;
     font-size: 20px;
 }
-
+*/
 /*footer*/
+/*
 footer{
     text-align: center;
     background:url(img/footer.jpg);  
@@ -77,3 +141,4 @@ footer{
     font-size: 13px;
     font-weight: lighter;    
 }
+*/
